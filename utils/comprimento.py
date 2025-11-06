@@ -1,6 +1,6 @@
-from funcoes import time, msvcrt
-from funcoes import limpaTela, mensagemErro, telaCarregamento
-from funcoes import definindoMedidas
+from utils.funcoes import time, msvcrt
+from utils.funcoes import limpaTela, mensagemErro, telaCarregamento
+from utils.funcoes import definindoMedidas
 
 def perguntaChave():
     return """ 1 - Km (Quilômetro)

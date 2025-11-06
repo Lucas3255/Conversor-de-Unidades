@@ -5,8 +5,12 @@
     ainda s, n está conseguindo realizar a ação simples. Olha e tentar resolver.
 '''
 
-from funcoes import time
-from funcoes import limpaTela, mensagemErro, telaCarregamento
+'''
+    Continuar fazendo a função aguardar_tecla no arquivo funcoes.py, para tornar esta funcionalidade
+    universal, já q em outras plataformas a biblioteca msvcrt n funciona em outros além de windows.
+'''
+
+from utils.funcoes import limpaTela, mensagemErro, telaCarregamento
 from utils.comprimento import calculoComprimento
 from utils.massa import calculoMassa
 from utils.temperatura import calculoTemperatura
