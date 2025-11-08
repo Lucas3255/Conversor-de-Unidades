@@ -1,4 +1,4 @@
-from utils.funcoes import time, msvcrt
+from utils.funcoes import time
 from utils.funcoes import limpaTela, mensagemErro, telaCarregamento
 from utils.funcoes import definindoMedidas
 
@@ -57,11 +57,10 @@ def calculoComprimento():
     limpaTela()
     print(f"=== Conversão de {nomes_completos[medidaInicial]} para {nomes_completos[medidaFinal]} ===")
     print("-"*40)
-    print(f"Resultado: {resultado:.6f} {nomes_completos[medidaFinal]}")
+    print(f"Resultado: {resultado:.6f} {medidaFinal}")
     time.sleep(1)
-    print("\nClique qualquer tecla para continuar.")
-    msvcrt.getch()
-    
-
+    input("\nClique Enter para continuar.")
+    limpaTela()
+    telaCarregamento(6)
 
 

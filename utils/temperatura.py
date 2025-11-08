@@ -1,4 +1,4 @@
-from utils.funcoes import time, msvcrt
+from utils.funcoes import time
 from utils.funcoes import limpaTela, mensagemErro, telaCarregamento
 from utils.funcoes import definindoMedidas
 
@@ -21,10 +21,16 @@ def calculoTemperatura():
         ('Kelvin', 'Fahrenheit'): lambda x: (x - 273.15) * 9/5 + 32
     }
 
+    siglas = {
+        'Celsius': '°C',
+        'Fahrenheit': '°F',
+        'Kelvin': 'K'
+    }
+
     temperaturaInicial = definindoMedidas(temperaturas, "Qual a temperatura inicial?", perguntaChave(), 0, 3)
     if temperaturaInicial is None:
         return
-    
+
     limpaTela()
     temperaturaFinal = definindoMedidas(temperaturas, "E a temperatura final?", perguntaChave(), 0, 3)
     if temperaturaFinal is None:
@@ -35,7 +41,7 @@ def calculoTemperatura():
     while True:
         try:    #Bug por aqui.
             limpaTela()
-            valor_input = input(f"Informe o valor em {temperaturas[temperaturaInicial]}.\n >> ").replace(',','.')
+            valor_input = input(f"Informe o valor em {temperaturaInicial}.\n >> ").replace(',','.')
             valor = float(valor_input)
             break
 
@@ -47,11 +53,11 @@ def calculoTemperatura():
         resultado = formulas[i](valor)
 
     limpaTela()
-    print(f"=== Conversão de {temperaturas[temperaturaInicial]} para {temperaturas[temperaturaFinal]} ===")
+    print(f"=== Conversão de {temperaturaInicial} para {temperaturaFinal} ===")
     print("-"*40)
-    print(f"Resultado: {resultado:.6f} {temperaturas[temperaturaFinal]}")
+    print(f"Resultado: {resultado:.2f} {siglas[temperaturaFinal]}")
     time.sleep(1)
-    print("\nClique qualquer tecla para continuar.")
-    msvcrt.getch()
+    input("\nClique Enter para continuar.")
+    limpaTela()
     telaCarregamento(6)
 

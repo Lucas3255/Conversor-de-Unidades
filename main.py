@@ -1,19 +1,14 @@
 '''
-    O bug está na linha 38 do arquivo temperatura.py, na qual apresenta um bug
-    mistérioso, n há erro de sintaxe e a lógica parece normal, por algum motivo,
-    mesmo a variável sendo string e apenas precisando apresentar uma frase concatenada,
-    ainda s, n está conseguindo realizar a ação simples. Olha e tentar resolver.
-'''
-
-'''
-    Continuar fazendo a função aguardar_tecla no arquivo funcoes.py, para tornar esta funcionalidade
-    universal, já q em outras plataformas a biblioteca msvcrt n funciona em outros além de windows.
+    Já dei inicio a ultima função, precisa ser revisando a linha 62, n está funcionando
+    até então. Além disso, talvez haja um possível erro de controle de erros da linha 50
+    em diante, tudo isso no arquivo de tempo.
 '''
 
 from utils.funcoes import limpaTela, mensagemErro, telaCarregamento
 from utils.comprimento import calculoComprimento
 from utils.massa import calculoMassa
 from utils.temperatura import calculoTemperatura
+from utils.tempo import calculoTempo
 
 while True:
     limpaTela()
@@ -35,7 +30,8 @@ while True:
             calculoTemperatura()
 
         case '4':   #Tempo
-            pass
+            limpaTela()
+            calculoTempo()
 
         case '5':
             limpaTela()

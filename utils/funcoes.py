@@ -1,4 +1,5 @@
-import platform, os, time, sys
+import platform, os, time
+
 
 def limpaTela():
     if platform.system().lower() == "windows":
@@ -7,19 +8,11 @@ def limpaTela():
         os.system('clear')
 
 
-def aguarda_tecla():
-    if platform.system().lower() == "windows":
-        import msvcrt
-        msvcrt.getch()
-    else:
-
-
 def mensagemErro(escolha):
     limpaTela()
     print(f"A opção '{escolha}' é Inválido!")
     time.sleep(1)
-    print("\nClique qualquer tecla para continuar.")
-    aguarda_tecla()
+    input("\nClique Enter para continuar.")
     pass
 
 
@@ -51,12 +44,20 @@ def definindoMedidas(lista, mensagem, pergunta, valorMin=0, valorMax=int()):
             if valorMin <= escolha < valorMax:
                 return lista[escolha]
             else:
-                mensagemErro(escolha)
+                mensagemErro(escolha+1)
 
         except ValueError:                  
-            mensagemErro(escolha)
+            mensagemErro(escolha+1)
 
-
+def telaResultado(nomeInicial, nomeFinal, result, i, medida):
+    limpaTela()
+    print(f"=== Conversão de {nomeInicial} para {nomeFinal} ===")
+    print("-"*40)
+    print(f"Resultado: {result:.{i}f} {medida}")
+    time.sleep(1)
+    input("\nClique Enter para continuar.")
+    limpaTela()
+    telaCarregamento(6)
 
 
 
