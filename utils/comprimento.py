@@ -1,6 +1,5 @@
-from utils.funcoes import time
 from utils.funcoes import limpaTela, mensagemErro, telaCarregamento
-from utils.funcoes import definindoMedidas
+from utils.funcoes import definindoMedidas, telaResultado
 
 def perguntaChave():
     return """ 1 - Km (Quilômetro)
@@ -54,13 +53,5 @@ def calculoComprimento():
 
     resultado = (valor * fatores[medidaInicial]) / fatores[medidaFinal]
 
-    limpaTela()
-    print(f"=== Conversão de {nomes_completos[medidaInicial]} para {nomes_completos[medidaFinal]} ===")
-    print("-"*40)
-    print(f"Resultado: {resultado:.6f} {medidaFinal}")
-    time.sleep(1)
-    input("\nClique Enter para continuar.")
-    limpaTela()
-    telaCarregamento(6)
-
+    telaResultado(nomes_completos[medidaInicial], nomes_completos[medidaFinal], resultado, 6, medidaFinal)
 

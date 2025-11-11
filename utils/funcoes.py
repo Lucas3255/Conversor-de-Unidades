@@ -49,6 +49,7 @@ def definindoMedidas(lista, mensagem, pergunta, valorMin=0, valorMax=int()):
         except ValueError:                  
             mensagemErro(escolha+1)
 
+
 def telaResultado(nomeInicial, nomeFinal, result, i, medida):
     limpaTela()
     print(f"=== Conversão de {nomeInicial} para {nomeFinal} ===")
@@ -58,8 +59,4 @@ def telaResultado(nomeInicial, nomeFinal, result, i, medida):
     input("\nClique Enter para continuar.")
     limpaTela()
     telaCarregamento(6)
-
-
-
-
 

@@ -1,9 +1,3 @@
-'''
-    Já dei inicio a ultima função, precisa ser revisando a linha 62, n está funcionando
-    até então. Além disso, talvez haja um possível erro de controle de erros da linha 50
-    em diante, tudo isso no arquivo de tempo.
-'''
-
 from utils.funcoes import limpaTela, mensagemErro, telaCarregamento
 from utils.comprimento import calculoComprimento
 from utils.massa import calculoMassa

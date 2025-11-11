@@ -1,4 +1,3 @@
-from utils.funcoes import time
 from utils.funcoes import limpaTela, mensagemErro, telaCarregamento
 from utils.funcoes import definindoMedidas, telaResultado
 
@@ -57,10 +56,9 @@ def calculoTempo():
         except ValueError:
             mensagemErro(valor_input)
 
-        resultado = (valor * tempoInicial) / tempoFinal
+    resultado = (valor * fatores[tempoInicial]) / fatores[tempoFinal]
 
-        telaResultado(nomes_completos[tempoInicial], nomes_completos[tempoFinal], resultado, 6, tempoFinal)
-
+    telaResultado(nomes_completos[tempoInicial], nomes_completos[tempoFinal], resultado, 1, tempoFinal)
 
 
 

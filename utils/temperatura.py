@@ -1,6 +1,5 @@
-from utils.funcoes import time
 from utils.funcoes import limpaTela, mensagemErro, telaCarregamento
-from utils.funcoes import definindoMedidas
+from utils.funcoes import definindoMedidas, telaResultado
 
 def perguntaChave():
     return """ 1 - Celsius (°C)
@@ -52,12 +51,6 @@ def calculoTemperatura():
     if i in formulas:
         resultado = formulas[i](valor)
 
-    limpaTela()
-    print(f"=== Conversão de {temperaturaInicial} para {temperaturaFinal} ===")
-    print("-"*40)
-    print(f"Resultado: {resultado:.2f} {siglas[temperaturaFinal]}")
-    time.sleep(1)
-    input("\nClique Enter para continuar.")
-    limpaTela()
-    telaCarregamento(6)
+    telaResultado(temperaturaInicial, temperaturaFinal, resultado, 6, siglas[temperaturaFinal])
+    
 
