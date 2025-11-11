@@ -38,6 +38,12 @@
    - Fahrenheit (°F)<br>
    - Kelvin (K)</p>
 
+<h3>⏱️ Conversão de Tempo</h3>
+<p>Conversão entre as unidades de tempo:<br>
+   - Segundos, Minutos e Horas.<br>
+   - Dias e Semanas.<br>
+   - Meses e Ano.</p>
+
 <h3>🎮 Interface do Usuário</h3>
 <p> - Menus interativos: Navegação simples e intuitiva.<br>
    - Validação de entrada: Tratamento robusto de erros.<br>
